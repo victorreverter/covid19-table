@@ -1,0 +1,442 @@
+@import 'reset';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
+
+$white: #fff;
+
+$colorBg: #31005B;
+$colorText: $white;
+
+$colorResalte: #00BDAA;
+$colorAltOne: #7e78d2;
+
+$colorBlockOne: #c29afe;
+$colorBlockTwo: #ff1579;
+$colorBlockThree: #00e8a9;
+
+$maxWidthApp: 1024px;
+
+body {
+    background: $colorBg;
+    color: $colorText;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+#mobile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .logo {
+        display: block;
+        width: 80%;
+        height: 80px;
+
+        background: url('../assets/Covid-19-Logo.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    h1 {
+        display: block;
+        width: 90%;
+        padding: 0.5em 0;
+        text-align: center;
+    }
+
+    @media (min-width: 1024px) {
+        display: none;
+    }
+}
+
+.head {
+    display: none;
+
+    width: 100%;
+    max-width: $maxWidthApp;
+
+    margin: 0 auto;
+    padding: 1.5em 0;
+
+    .logo {
+        display: block;
+        width: 200px;
+        height: 60px;
+
+        background: url('../assets/Covid-19-Logo.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .search-bar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 40%;
+        background: $colorResalte;
+
+        border-radius: 40px 0 0 40px;
+
+        position: relative;
+        cursor: pointer;
+
+        #search {
+            display: block;
+
+            width: 100%;
+
+            background: transparent;
+            // background: yellow;
+            border: none;
+            color: $colorText;
+
+            font-size: 1.1em;
+            padding: 0.4em 0em 0.4em 1em;
+
+            &::placeholder {
+                color: $colorText;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            &:-webkit-autofill,
+            &:-webkit-autofill:hover,
+            &:-webkit-autofill:focus,
+            textarea:-webkit-autofill,
+            textarea:-webkit-autofill:hover,
+            textarea:-webkit-autofill:focus,
+            select:-webkit-autofill,
+            select:-webkit-autofill:hover,
+            select:-webkit-autofill:focus {
+                border: 1px solid transparent;
+                -webkit-text-fill-color: $colorText;
+                -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+                transition: background-color 5000s ease-in-out 0s;
+            }
+        }
+
+        .icon-search {
+            display: block;
+            width: 20px;
+            height: 20px;
+
+            position: absolute;
+            right: 2%;
+
+            svg,
+            svg path {
+                display: block;
+                width: 20px;
+                height: 20px;
+                margin: 0 auto;
+
+                fill: #ffffff;
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.global {
+    display: none;
+    width: 100%;
+
+    background: $colorAltOne;
+
+    .global-data {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 90%;
+        max-width: $maxWidthApp;
+
+        margin: 0 auto;
+        padding: 1.5em 0;
+
+        border-bottom: 4px solid rgba($colorBg, 0.3);
+
+        .global-item {
+            display: block;
+
+            width: 13%;
+
+            padding: 0.8em 0.5em;
+            background: red;
+
+            border-radius: 5px;
+
+            h4 {
+                display: block;
+                width: 100%;
+
+                font-size: 0.9em;
+                font-weight: 500;
+                text-align: center;
+            }
+
+            h2 {
+                display: block;
+                width: 100%;
+
+                padding: 0.3em 0 0;
+
+                font-size: 1.6em;
+                font-weight: 700;
+                text-align: center;
+            }
+        }
+
+        #new-confirmed {
+            background: $colorBlockOne;
+        }
+
+        #total-confirmed {
+            background: rgba($colorBlockOne, 0.5);
+        }
+
+        #new-deaths {
+            background: $colorBlockTwo;
+        }
+
+        #total-deaths {
+            background: rgba($colorBlockTwo, 0.5);
+        }
+
+        #new-recovered {
+            background: $colorBlockThree;
+        }
+
+        #total-recovered {
+            background: rgba($colorBlockThree, 0.5);
+        }
+    }
+
+    .sub-global {
+        display: block;
+        width: 90%;
+
+        max-width: $maxWidthApp;
+        margin: 0 auto;
+
+        padding: 1em 0;
+
+        #last-update {
+            font-size: 1.2em;
+            font-weight: 700;
+
+            span {
+                color: $colorBg;
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        display: block;
+    }
+}
+
+.all-country {
+    display: none;
+    width: 90%;
+    max-width: $maxWidthApp;
+
+    margin: 0 auto;
+    padding: 2em 0;
+
+    transition: 0.5s;
+
+    table {
+        display: block;
+        width: 100%;
+
+        user-select: none;
+
+        thead {
+            display: block;
+            width: 100%;
+
+            // user-select: none;
+            // cursor: pointer;
+
+            padding: 1em 0 0.8em;
+
+            tr {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                width: 100%;
+
+                cursor: pointer;
+
+                .country-head {
+                    width: 165px;
+                    // background: red;
+                }
+
+                .n-deaths-head {
+                    width: 100px;
+                }
+
+                .t-deaths-head {
+                    width: 100px;
+                }
+
+                .more-head {
+                    width: 80px;
+                }
+
+
+                th {
+                    display: block;
+                    width: 11%;
+
+                    padding: 0.5em 0.25em;
+
+                    font-size: 0.85em;
+                    color: $colorResalte;
+                    text-align: left;
+                }
+
+                .th-selected {
+                    // background: red;
+                    position: relative;
+
+                    &:after {
+                        content: "";
+                        display: block;
+                        width: 6px;
+                        height: 6px;
+
+                        background: red;
+
+                        position: absolute;
+                        top: 50%;
+                        left: -5px;
+
+                        transform: translate(-50%, -50%);
+
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+
+        tbody {
+            display: block;
+            width: 100%;
+
+            padding: 0.2em 0;
+            cursor: pointer;
+
+            tr {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                padding: 0.3em 0;
+
+                .country {
+                    width: 165px;
+                    padding-right: 0.4em;
+                }
+
+                .n-deaths {
+                    width: 100px;
+                }
+
+                .t-deaths {
+                    width: 100px;
+                }
+
+                .more {
+                    width: 80px;
+                    height: 25px;
+
+                    background: url('../assets/More-icon.png');
+                    background-size: contain;
+                    background-position: left center;
+                    background-repeat: no-repeat;
+                }
+
+
+                td {
+                    display: block;
+                    text-align: left;
+                    width: 11%;
+
+                    line-height: 1.3em;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        display: block;
+    }
+}
+
+.specific-country {
+    display: none;
+    width: 90%;
+    max-width: $maxWidthApp;
+
+    margin: 0 auto;
+    padding: 2em 0;
+
+    position: relative;
+
+    transition: 0.5s;
+
+    #closeSpecific {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        width: 30px;
+        height: 30px;
+
+        background: $colorBlockTwo;
+        border-radius: 20px;
+        font-weight: 900;
+
+        position: absolute;
+        top: 5%;
+        right: 5%;
+
+        transform: translate(-50%, -50%);
+
+        cursor: pointer;
+    }
+
+    @media (min-width: 1024px) {
+        display: block;
+    }
+}

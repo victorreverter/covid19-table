@@ -1,0 +1,594 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background: #31005B;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+#mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#mobile .logo {
+  display: block;
+  width: 80%;
+  height: 80px;
+  background: url("../assets/Covid-19-Logo.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#mobile h1 {
+  display: block;
+  width: 90%;
+  padding: 0.5em 0;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  #mobile {
+    display: none;
+  }
+}
+
+.head {
+  display: none;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1.5em 0;
+}
+
+.head .logo {
+  display: block;
+  width: 200px;
+  height: 60px;
+  background: url("../assets/Covid-19-Logo.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.head .search-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 40%;
+  background: #00BDAA;
+  border-radius: 40px 0 0 40px;
+  position: relative;
+  cursor: pointer;
+}
+
+.head .search-bar #search {
+  display: block;
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.1em;
+  padding: 0.4em 0em 0.4em 1em;
+}
+
+.head .search-bar #search::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.head .search-bar #search:-ms-input-placeholder {
+  color: #fff;
+}
+
+.head .search-bar #search::-ms-input-placeholder {
+  color: #fff;
+}
+
+.head .search-bar #search::placeholder {
+  color: #fff;
+}
+
+.head .search-bar #search:focus {
+  outline: none;
+}
+
+.head .search-bar #search:-webkit-autofill, .head .search-bar #search:-webkit-autofill:hover, .head .search-bar #search:-webkit-autofill:focus,
+.head .search-bar #search textarea:-webkit-autofill,
+.head .search-bar #search textarea:-webkit-autofill:hover,
+.head .search-bar #search textarea:-webkit-autofill:focus,
+.head .search-bar #search select:-webkit-autofill,
+.head .search-bar #search select:-webkit-autofill:hover,
+.head .search-bar #search select:-webkit-autofill:focus {
+  border: 1px solid transparent;
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.head .search-bar .icon-search {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 2%;
+}
+
+.head .search-bar .icon-search svg,
+.head .search-bar .icon-search svg path {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+  fill: #ffffff;
+}
+
+@media (min-width: 1024px) {
+  .head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.global {
+  display: none;
+  width: 100%;
+  background: #7e78d2;
+}
+
+.global .global-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1.5em 0;
+  border-bottom: 4px solid rgba(49, 0, 91, 0.3);
+}
+
+.global .global-data .global-item {
+  display: block;
+  width: 13%;
+  padding: 0.8em 0.5em;
+  background: red;
+  border-radius: 5px;
+}
+
+.global .global-data .global-item h4 {
+  display: block;
+  width: 100%;
+  font-size: 0.9em;
+  font-weight: 500;
+  text-align: center;
+}
+
+.global .global-data .global-item h2 {
+  display: block;
+  width: 100%;
+  padding: 0.3em 0 0;
+  font-size: 1.6em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.global .global-data #new-confirmed {
+  background: #c29afe;
+}
+
+.global .global-data #total-confirmed {
+  background: rgba(194, 154, 254, 0.5);
+}
+
+.global .global-data #new-deaths {
+  background: #ff1579;
+}
+
+.global .global-data #total-deaths {
+  background: rgba(255, 21, 121, 0.5);
+}
+
+.global .global-data #new-recovered {
+  background: #00e8a9;
+}
+
+.global .global-data #total-recovered {
+  background: rgba(0, 232, 169, 0.5);
+}
+
+.global .sub-global {
+  display: block;
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 1em 0;
+}
+
+.global .sub-global #last-update {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.global .sub-global #last-update span {
+  color: #31005B;
+}
+
+@media (min-width: 1024px) {
+  .global {
+    display: block;
+  }
+}
+
+.all-country {
+  display: none;
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 2em 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.all-country table {
+  display: block;
+  width: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.all-country table thead {
+  display: block;
+  width: 100%;
+  padding: 1em 0 0.8em;
+}
+
+.all-country table thead tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+}
+
+.all-country table thead tr .country-head {
+  width: 165px;
+}
+
+.all-country table thead tr .n-deaths-head {
+  width: 100px;
+}
+
+.all-country table thead tr .t-deaths-head {
+  width: 100px;
+}
+
+.all-country table thead tr .more-head {
+  width: 80px;
+}
+
+.all-country table thead tr th {
+  display: block;
+  width: 11%;
+  padding: 0.5em 0.25em;
+  font-size: 0.85em;
+  color: #00BDAA;
+  text-align: left;
+}
+
+.all-country table thead tr .th-selected {
+  position: relative;
+}
+
+.all-country table thead tr .th-selected:after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: red;
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+
+.all-country table tbody {
+  display: block;
+  width: 100%;
+  padding: 0.2em 0;
+  cursor: pointer;
+}
+
+.all-country table tbody tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.3em 0;
+}
+
+.all-country table tbody tr .country {
+  width: 165px;
+  padding-right: 0.4em;
+}
+
+.all-country table tbody tr .n-deaths {
+  width: 100px;
+}
+
+.all-country table tbody tr .t-deaths {
+  width: 100px;
+}
+
+.all-country table tbody tr .more {
+  width: 80px;
+  height: 25px;
+  background: url("../assets/More-icon.png");
+  background-size: contain;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.all-country table tbody tr td {
+  display: block;
+  text-align: left;
+  width: 11%;
+  line-height: 1.3em;
+}
+
+@media (min-width: 1024px) {
+  .all-country {
+    display: block;
+  }
+}
+
+.specific-country {
+  display: none;
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 2em 0;
+  position: relative;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.specific-country #closeSpecific {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: #ff1579;
+  border-radius: 20px;
+  font-weight: 900;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  .specific-country {
+    display: block;
+  }
+}
